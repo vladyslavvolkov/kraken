@@ -1,0 +1,11 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Helm Chart Release
+on:
+  workflow_dispatch:
+jobs:
+  chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helm/chart-releaser-action@v1.2.1
